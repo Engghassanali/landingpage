@@ -1,0 +1,122 @@
+
+    
+    .custom-navbar {
+        width: 80%;
+        margin: 0 auto;
+        height: 88px !important;
+        flex-shrink: 0;
+
+        background: rgba(18, 27, 51, 0.40) !important;
+        border-radius: 80px;
+
+        backdrop-filter: blur(8px);
+    }
+
+    body {
+        background: url(<path-to-image>) lightgray 0% 0% / 100px 100px repeat;
+        background-color: rgb(1, 4, 14);
+    }
+
+    .navbar-nav .nav-item:not(:last-child) {
+        margin-right: 60px;
+    }
+
+    .navbar-brand img {
+        height: 74px;
+        flex-shrink: 0;
+    }
+
+    /* Define styles inside media query */
+    @media (max-width: 994px) {
+        * {
+            /* background-color: aqua; */
+        }
+
+        .navbar-text {
+            display: none;
+            /* Hide the navbar-text div on small screens */
+        }
+
+        .custom-navbar {
+            width: 100%;
+            margin: 0 auto;
+            border-radius: 0px;
+        }
+    }
+.nav-NonActive{
+    color: #757A8D;
+    
+        font-family: Geometria;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+}
+.nav-Active{
+        color: #FFF;
+        font-family: Geometria;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+}
+.hero-section {
+    background: linear-gradient(rgb(1, 4, 14), rgb(13, 16, 52));
+}
+
+.email-input {
+    position: relative;
+}
+
+.email-input i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.email-input input[type="email"] {
+    padding-left: 30px;
+}
+
+
+ .logo-container {
+     display: inline-flex;
+     align-items: center;
+     gap: 29px;
+     flex-wrap: wrap;
+  
+     /* Allow wrapping on smaller screens */
+ }
+
+ .logoImg {
+     width: 15%;
+     height: 15%;
+ }
+.logo-section {
+    background-color: rgb(13, 19, 56);
+    padding-top: 3rem;
+}
+
+ .feature-container {
+     display: flex;
+     justify-content: center;
+     /* Center horizontally */
+     align-items: center;
+     /* Center vertically */
+     height: 100vh;
+     /* Adjust as needed */
+ }
+.works-section {
+    max-width: 100%;
+    height: auto;
+}
+
+.works-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+

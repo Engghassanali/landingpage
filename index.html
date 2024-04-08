@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"> <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+
+
+    <style>
+      .hero-logo {
+        height: 117px;
+        flex-shrink: 0;
+      }
+      .hero-h {
+        color: #d0d9f9;
+
+        font-family: Geometria;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      .hero-p {
+        color: #757a8d;
+
+        font-family: Geometria;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+      }
+      .hero-email {
+        color: #757a8d;
+        width: 400px;
+        height: 56px;
+        flex-shrink: 0;
+        border-radius: 48px;
+        border: 1px solid #283455;
+
+        background: #0d152b;
+      }
+      .hero-email-placeholder::placeholder {
+        color: #757a8d;
+        /* text-align: center; */
+        font-family: Geometria;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      .join-btn {
+        width: 81px;
+        height: 56px;
+        flex-shrink: 0;
+        border-radius: 48px;
+        background: #474def;
+      }
+      .hero-bottom {
+        display: flex;
+        /* justify-content: center; */
+        /* align-items: center; */
+        gap: 6px;
+      }
+      .text-bottom {
+        height: 44px;
+        display: flex;
+        padding: 12px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        border-radius: 48px;
+        border: 1px solid #2a2f5c;
+        background: #1b1e43;
+      }
+      .hero-bottom-img {
+        /* width: 44px; */
+        height: 44px;
+        border-radius: 48px;
+        background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+      }
+      .match-text {
+        /* margin-top: 13%; */
+        color: #fff;
+        font-family: Geometria;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 74px; /* Adjusted line-height */
+      }
+      .right-hero-img {
+        background: none;
+        height: auto;
+        flex-shrink: 0;
+      }
+      .right-hero-img img {
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light custom-navbar"
+      style="background-color: rgba(18, 27, 51, 0.4)"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="Final Logo.png" alt="Logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link nav-Active" aria-current="page" href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-NonActive" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-NonActive" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-NonActive" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-text">
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="toggleButton"
+            /><label class="form-check-label" for="toggleButton"
+              ><span class="moon-icon"></span
+              ><span class="sun-icon d-none"></span
+            ></label>
+          </div>
+          <!-- <button class="btn btn-primary">Dark Mode</button> You can change the text to "Light Mode" if needed -->
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid hero-section">
+      <div class="row">
+        <div class="col-lg-6 p-0 mt-4">
+          <!-- Content for the left half -->
+          <div class="d-flex flex-column justify-content-end h-100">
+            <div class="p-5">
+              <div class="hero-logo mb-4 ms-5">
+                <img src="Logo.png" alt="" />
+              </div>
+              <div class="hero-h mb-4 ms-5">
+                Where Tomorrow's Leaders Connect and Innovate.
+              </div>
+              <div class="hero-p mb-4 ms-5">
+                Today is not just an app, it's a movement. A movement where
+                isolation becomes collaboration, where challenges become
+                victories. Every entrepreneur knows the journey can be solitary,
+                but with 'Today', you're no longer navigating alone.
+              </div>
+
+              <div class="email-input mb-4 d-flex justify-content-end ms-5">
+                <i class="fas fa-envelope me-2"></i>
+                <input
+                  class="hero-email hero-email-placeholder flex-grow-1 me-2"
+                  type="email"
+                  placeholder="Enter Email Address"
+                />
+                <button class="btn btn-primary join-btn" type="submit">
+                  Join
+                </button>
+              </div>
+            </div>
+            <div class="hero-bottom d-flex justify-content-end">
+              <div class="hero-bottom-img">
+                <img src="Ellipse 59.png" alt="" />
+              </div>
+              <div>
+                <p class="match-text text-bottom">
+                  <i class="fa-regular fa-heart"></i>
+                  Match for you
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 p-0">
+          <!-- Content for the right half -->
+          <div class="hero-bottom d-flex justify-content-center mt-2 mb-0" style="padding-top: 3rem; ">
+            <div class="hero-bottom-img ">
+              <img src="Ellipse 59.png" alt="" />
+            </div>
+            <div>
+              <p class="match-text text-bottom">
+                <i class="fa-solid fa-comment-dots"></i>
+                Message for you
+              </p>
+            </div>
+          </div>
+          <div class="right-hero-img">
+            <img src="iPhone-15-Pro 5c.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+<div class="container-fluid logo-section">
+  <div class="row justify-content-center">
+    <div class="col">
+      <div class="logo-container">
+        <img class="logoImg" src="./images/logo-frame/01 1.png" alt="Logo 1"> 
+        <img  src="./images/logo-frame/Rectangle 5904 (1).png" alt="">
+        <img class="logoImg" src="./images/logo-frame/02 1.png" alt="Logo 2">
+        <img  src="./images/logo-frame/Rectangle 5904 (1).png" alt=""> 
+        <img class="logoImg" src="./images/logo-frame/03 1.png" alt="Logo 3"> 
+        <img  src="./images/logo-frame/Rectangle 5904 (1).png" alt="">
+        <img class="logoImg" src="./images/logo-frame/04 1.png" alt="Logo 4">
+        <img  src="./images/logo-frame/Rectangle 5904 (1).png" alt="">
+        <img class="logoImg" src="./images/logo-frame/05 1.png" alt="Logo 5">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="features-section " style="padding-top: 4rem;    background: linear-gradient( rgb(13, 16, 52),rgb(1, 4, 14));
+;
+
+">
+ <div class="container">
+  <div class="row">
+    <div class="col-10">
+      <p class="" style="color: #FFF;
+
+font-family: K2D;
+font-size: 3rem;
+font-style: normal;
+font-weight: 3rem;
+line-height: normal;">Seamless Networking</p>
+    </div>
+    <div class="col-2 d-flex justify-content-end">
+      <p class="text-white text-center fs-6 fw-bold align-self-center px-3 py-2 border border-2 border-primary rounded-pill" style="width: fit-content;">Get Started</p>
+    </div>
+  </div>
+</div>
+</div>
+      
+<div class="container " style="color: #757A8D;
+
+font-family: Geometria;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */"><p>Step into 'Today'-where entrepreneurial paths intersect to forge powerful alliances. Overcome isolation in the entrepreneurial journey with a platform that's crafted for the ambitious, the innovators, the dreamers. 'Today' is your space to find the right peers, mentors, and opportunities with just a swipe. Join a movement where every connection is a potential catalyst for your next big venture.</p></div>
+
+
+<div class="container works-section" style="max-width: 100%; height: auto;">
+   <img src="./images/f-complete.png" alt="">
+</div>
+<div class="mt-5">
+<p class="text-center mt-5" style="color: #FFF;
+
+font-family: K2D;
+font-size: 3rem;
+font-style: normal;
+font-weight: 3rem;
+line-height: normal;">How Does It Work?</p>
+</div>
+<div class="container-fluid works-section" style="width: 100%; height: auto;">
+   <img src="./images/t-1.png" style="width: 100%;" alt="">
+</div>
+
+
+<div class="container-fluid works-section" style="width: 100%; height: auto;">
+   <img src="./images/success-comp-pic.png" style="width: 100%;" alt="">
+</div>
+
+<div class="container-fluid works-section" style="width: 100%; height: auto;">
+   <img src="./images/swipe-comp-pic.png" style="width: 100%;" alt="">
+</div>
+
+<div class="container-fluid works-section" style="width: 100%; height: auto;">
+   <img src="./images/chat-comp-pic.png" style="width: 100%;" alt="">
+</div>
+
+
+
+
+
+</div>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+  </body>
+</html>
