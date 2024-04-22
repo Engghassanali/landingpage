@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Combined Image Slider</title>
+<style>
+  /* Styles from the first HTML */
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .cards {
+    flex: 1;
+  }
+
+  .CarousalCard {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .CarousalActive {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .images {
+    flex: 1;
+    text-align: center;
+  }
+
+  .CarousalImage {
+    max-width: 45%;
+    max-height: 100%;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .inactive-image {
+    display: none;
+  }
+
+  /* Styles from the second HTML */
+  .image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 400px;
+    border: 2px solid #ccc;
+    margin-bottom: 20px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="cards">
+    <div class="CarousalCard CarousalActive" id="card1">Card 1</div>
+    <div class="CarousalCard" id="card2">Card 2</div>
+    <div class="CarousalCard" id="card3">Card 3</div>
+    <div class="CarousalCard" id="card4">Card 4</div>
+  </div>
+  <div class="images">
+    <div class="image-container">
+      <img class="CarousalImage CarousalActive" src="image0.jpg" alt="Image 0">
+      <img class="CarousalImage" src="image1.jpg" alt="Image 1">
+    </div>
+    <button id="button">Next</button>
+  </div>
+</div>
+
+<script>
+    let currentCard = 1;
+    let currentIndex = 0;
+    const totalCards = 4;
+    const images = ['image0.jpg', 'image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg', 'image5.jpg', 'image6.jpg', 'image7.jpg', 'image8.jpg', 'image9.jpg'];
+    const cards = document.querySelectorAll('.CarousalCard');
+    const activeImage = document.querySelector('.CarousalImage.CarousalActive');
+    const inactiveImage = document.querySelector('.CarousalImage:not(.CarousalActive)');
+  
+    document.getElementById('button').addEventListener('click', function() {
+      // Remove box shadow from all cards
+      cards.forEach(card => {
+        card.classList.remove('CarousalActive');
+      });
+  
+      // Move to next card
+      currentCard = (currentCard % totalCards) + 1;
+  
+      // Add box shadow to the new active card
+      document.getElementById('card' + currentCard).classList.add('CarousalActive');
+  
+      // Show next image
+      currentIndex = (currentIndex + 1) % images.length;
+      const nextIndex = (currentIndex + 1) % images.length;
+  
+      inactiveImage.src = images[nextIndex];
+      inactiveImage.alt = 'Image ' + nextIndex;
+  
+      const tempSrc = activeImage.src;
+      const tempAlt = activeImage.alt;
+  
+      activeImage.src = inactiveImage.src;
+      activeImage.alt = inactiveImage.alt;
+  
+      inactiveImage.src = tempSrc;
+      inactiveImage.alt = tempAlt;
+    });
+  </script>
+</body>
+</html>

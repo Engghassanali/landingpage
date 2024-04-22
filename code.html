@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 80%; 
+    }
+
+    .swiper-slide {
+      display: inline-flex;
+padding: 40px;
+flex-direction: column;
+align-items: flex-start;
+gap: 8px;
+border-radius: 40px;
+border: 1px solid #434978;
+background: rgba(12, 20, 40, 0.40);
+backdrop-filter: blur(100px);
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    
+
+    .swiper-button-prev {
+      left: -250px;
+      
+
+    }
+
+    .swiper-button-next {
+      right: -250px;
+
+
+    }
+   
+    .swiper-button-prev {
+  /* background-image: url("./images/prenext.png") !important; */
+  width: 80px;
+height: 80px;
+background-color: rgba(12, 20, 40, 0.40);
+border: 1px solid #FFF ;
+border-radius: 50%;
+
+}
+
+.swiper-button-next {
+  /* background-image: url("./images/prenext.png") !important; */
+  width: 80px;
+height: 80px;
+background-color: rgba(12, 20, 40, 0.40);
+border: 1px solid #FFF ;
+border-radius: 50%;
+
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-family: sans-serif;
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+  content:''
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+  content:''
+}
+.leftIcon{
+  width: 40px;
+height: 40px;
+position: absolute;
+right: 185px;
+top: 0px;
+}
+.rightIcon{
+  width: 40px;
+height: 40px;
+  position: absolute;
+left:  185px;
+top: 0px;
+}
+.swiper-slide:nth-child(2) {
+ background: rgba(12, 20, 40, 0.40);
+
+
+}
+.swiper-slide:nth-child(1) {
+  opacity: 0.2;
+}
+.swiper-slide:nth-child(3) {
+opacity: 0.2;
+}
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div class="swiper-container mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
+    </div>
+
+    <!-- Navigation buttons -->
+  
+  </div>
+ <div style="display: flex;justify-content: center;align-items: center;">
+  <div style="position: absolute;bottom: 0% ;margin-top: 200px;margin-left: 45%;">
+    <div class="swiper-button-prev" ></div>
+    <img src="./images/LeftArrow.svg" style="color: #FFF;" class="leftIcon">
+  </div>
+  <div style="position: absolute;bottom: 0% ;margin-top: 200px; margin-right: 45%;">
+    <div class="swiper-button-next" ></div>
+    <img src="./images/RightArrow.svg" style="color: #FFF;" class="rightIcon">
+  </div>
+ 
+ </div>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      loop: true, 
+      spaceBetween: 30,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+</body>
+
+</html>
