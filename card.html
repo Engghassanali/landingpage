@@ -3,73 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Image Slider with Cards and Images</title>
+<title>Circle with Border</title>
 <style>
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    margin: 0 auto;
-  }
+ .circle {
+    width: 200px; /* Adjust the size of the circle */
+    height: 200px; /* Adjust the size of the circle */
+    border-radius: 50%; /* Create a circle shape */
+    border: 10px solid green; /* Set border width and color */
+    border-top-color: green; /* Set the top border color to red (35%) */
+    border-right-color: red; /* Set the right border color to green (65%) */
+    border-bottom-color: green; /* Set the bottom border color to green (65%) */
+    border-left-color: green; /* Set the left border color to green (65%) */
+}
 
-  .cards {
-    flex: 1;
-  }
 
-  .card {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
-    transition: box-shadow 0.3s ease;
-  }
-
-  .active-card {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-
-  .images {
-    flex: 1;
-    text-align: center;
-  }
-
-  .active-image {
-    display: block;
-  }
-
-  .inactive-image {
-    display: none;
-  }
 </style>
 </head>
 <body>
-<div class="container">
-  <div class="cards">
-    <div class="card active-card" id="card1">Card 1</div>
-    <div class="card" id="card2">Card 2</div>
-    <div class="card" id="card3">Card 3</div>
-    <div class="card" id="card4">Card 4</div>
-  </div>
-  <button id="button">Next</button>
-  
-</div>
 
-<script>
-  let currentCard = 1;
-  let currentImage = 3; // Initially active image is the second one
-  const totalCards = 4;
-  document.getElementById('button').addEventListener('click', function() {
-    // Remove box shadow from current active card
-    document.getElementById('card' + currentCard).classList.remove('active-card');
+<div class="circle"></div>
 
-    // Move to next card
-    currentCard = (currentCard % totalCards) + 1;
-
-    // Add box shadow to the new active card
-    document.getElementById('card' + currentCard).classList.add('active-card');
-
-   
-  });
-</script>
 </body>
 </html>

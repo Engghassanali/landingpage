@@ -11,12 +11,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
         /* Additional CSS styles */
+        .headerContainer{
+          width: 100%;
+        }
+     
         .header-container {
             width: 163px;
             height: 117px;
             flex-shrink: 0;
         }
-     
+        .description-text{
+          text-align: justify;
+        }
+     .header-text{
+      text-align: center;
+     }
 
   
     
@@ -34,23 +43,29 @@
     }
    
     .swiper-button-prev {
-  /* background-image: url("./images/prenext.png") !important; */
-  width: 80px;
+width: 80px;
 height: 80px;
 background-color: rgba(12, 20, 40, 0.40);
-border: 1px solid #FFF ;
+border: 1px solid rgba(12, 20, 40, 0.40);
 border-radius: 50%;
-
+border-top-color:#FFF;
+    border-right-color: #FFF;
+    border-bottom-color: #FFF; 
+    border-left-color:#070C1C;
+    border-width: 0 1px 0 5px; 
 }
 
 .swiper-button-next {
-  /* background-image: url("./images/prenext.png") !important; */
-  width: 80px;
+width: 80px;
 height: 80px;
 background-color: rgba(12, 20, 40, 0.40);
-border: 1px solid #FFF ;
+border: 1px solid rgba(12, 20, 40, 0.40);
 border-radius: 50%;
-
+border-top-color:#FFF;
+    border-right-color: #070C1C;
+    border-bottom-color: #FFF; 
+    border-left-color:#FFF;
+    border-width: 0 5px 0 1px; 
 }
 
 .swiper-button-next:after, .swiper-button-prev:after {
@@ -63,15 +78,15 @@ border-radius: 50%;
   content:''
 }
 .leftIcon{
-  width: 40px;
-height: 40px;
+  width: 35px;
+height: 35px;
 position: absolute;
 right: 185px;
 top: 0px;
 }
 .rightIcon{
-  width: 40px;
-height: 40px;
+  width: 35px;
+height: 35px;
   position: absolute;
 left:  185px;
 top: 0px;
@@ -213,7 +228,31 @@ line-height: normal;
   .accordion-button::after {
     background-image: url('./images/DownArrow.svg');
   }
+  .c_space {
+  display: flex;
+  justify-content: space-between; /* This separates the elements */
+}
+
+.left {
+  order: 1; /* Moves this element to the left */
+}
+
+.right {
+  order: 2; /* Moves this element to the right */
+}
   @media screen and (max-width: 1024px) {
+    .c_space {
+  display: flex !important;
+  justify-content: space-between !important; /* This separates the elements */
+}
+
+.left {
+  order: 1 !important; /* Moves this element to the left */
+}
+
+.right {
+  order: 2 !important; /* Moves this element to the right */
+}
     .swiper-button-prev {
       left: -200px;
     }
@@ -256,6 +295,37 @@ left:  40px;
 }
 }
 @media screen and (max-width: 600px) {
+  .swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 220px;
+    position: relative;
+    transition-property: transform;
+    display: block;
+}
+  .n_button{
+    display: none;
+  }
+  .header-text{
+    text-align: center;
+  }
+  .custom-image {
+    width: 231px;
+    height: 188px;
+    flex-shrink: 0;
+}
+  .headerContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+  }
+  .description-text{
+    text-align: center;
+  }
   .leftIcon{
     width: 24px;
 height: 24px;
@@ -344,15 +414,14 @@ line-height: normal;
             <a href="#" class="nav-link" style="color: #757A8D;" onclick="handleClick(this)">Overview</a>
             <a href="#" class="nav-link" style="color: #757A8D;" onclick="handleClick(this)">Contact Us</a>
           </div>
-        
-
     </div>
       <!-- end of navbar -->
     <!-- header -->
     <div class="container" style="margin-top: 80px;">
         <div class="row">
             <div class="col-md-6">
-                <div class="header-container">
+                <div class="headerContainer">
+                  <div class="header-container">
                     <img src="./images/Logo.png" alt="Logo" width="163" height="117">
                 </div>
                 <p class="header-text">Where Tomorrow's Leaders Connect and Innovate.</p>
@@ -375,6 +444,7 @@ line-height: normal;
                     <span class="text">Match For You</span>
                   </button>
             </div>
+                </div>
             </div>
             <div class="col-md-6">
                 <div class="message">
@@ -384,9 +454,11 @@ line-height: normal;
                         <span class="text">Message For You</span>
                       </button>
                 </div>
-                <img src="./images/header_img.png" alt="Image" class="custom-image">
+                <div class="d-flex justify-content-center align-items-center">
+                  <img src="./images/header_img.png" alt="Image" class="custom-image">
+                </div>
                 <div class="message0">
-                    <img src="./images/circle.png" width="40px" height="40px">
+                    <img src="./images/circle1.png" width="40px" height="40px">
                     <button class="button">
                         <img class="icon" src="./images/Handshake.svg" alt="Icon">
                     <span class="text">Match For You</span>
@@ -424,7 +496,7 @@ line-height: normal;
     <!-- Network Section -->
     <div class="contianer" style="margin-top: 80px;">
         <div class="d-flex justify-content-between">
-            <h1 class="n_heading text-center">
+            <h1 class="n_heading">
                 Seamless Networking
             </h1>
             <button class="btn n_button">
@@ -499,7 +571,7 @@ line-height: normal;
                     </div>
                   </div>
                   <div class="col-lg-6 col-sm-12 custom-col">
-                    <div class="custom-card-small">
+                    <div class="custom-card-small1">
                       <div class="custom-card-body">
                         <div class="custom-card-inner">
                             <img src="./images/Grow.svg" alt="logo">
@@ -514,7 +586,7 @@ line-height: normal;
                 </div>
                 <div class="row custom-row">
                     <div class="col-lg-6 col-sm-12 custom-col">
-                      <div class="custom-card-small">
+                      <div class="custom-card-small2">
                         <div class="custom-card-body">
                           <div class="custom-card-inner">
                            <img src="./images/User_Check.png" alt="logo">
@@ -526,7 +598,7 @@ line-height: normal;
                       </div>
                     </div>
                     <div class=" col-lg-6 col-sm-12 custom-col">
-                      <div class="custom-card-small">
+                      <div class="custom-card-small3">
                         <div class="custom-card-body">
                           <div class="custom-card-inner">
                               <img src="./images/Hand_Stars.png" alt="logo">
@@ -668,16 +740,39 @@ line-height: normal;
     </div>
     <!-- end of chate container -->
     <!-- Carousal Container -->
-    <div class="container" style="position: relative; margin-bottom: 100px;">
+    <div class="container" style="position: relative; margin-bottom: 80px;">
       <h1 class="text-center carousal_t" >Users are Loving Today</h1>
       <div class="swiper-container mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <div class="d-flex">
-              <img src="./images/c_img1.png"  class="img-1">
+            <div class="d-flex justify-content-between">
+              
+                <div class="textContainer">
+                  <img src="./images/c_img1.png"  class="img-1">
+                 <div class="flexdirection">
+                  <h2>Jamie</h2>
+                  <p>Tech Startup Founder</p>
+                 </div>
+                </div>
+                <div class="d-flex">
+                  <img src="./images/FillStar.svg" class="FillStar" >
+                  <img src="./images/FillStar.svg" class="FillStar" >
+                  <img src="./images/FillStar.svg" class="FillStar" >
+                  <img src="./images/FillStar.svg" class="FillStar" >
+                  <img src="./images/Star.svg" class="FillStar" >
+                </div>
+            </div>
+            <p class="p">A Game-Changer for Networking As an entrepreneur, the quest for meaningful connections can be daunting. Today has been a game-changer for me. The caliber of professionals I've met here is unparalleled. Each connection has been a stepping stone to deeper industry knowledge and potential collaborations. It’s refreshing to find a platform where every interaction has the promise of progress.</p>
+          </div>
+          <div class="swiper-slide"> <div class="d-flex justify-content-between">
+          
+            
               <div class="textContainer">
-                <h2>Jamie</h2>
-                <p>Tech Startup Founder</p>
+                <img src="./images/c_img2.png"  class="img-1">
+               <div class="flexdirection">
+                <h2>Samantha</h2>
+                <p>Aspiring Entrepreneur</p>
+               </div>
               </div>
               <div class="d-flex">
                 <img src="./images/FillStar.svg" class="FillStar" >
@@ -686,47 +781,40 @@ line-height: normal;
                 <img src="./images/FillStar.svg" class="FillStar" >
                 <img src="./images/Star.svg" class="FillStar" >
               </div>
-            </div>
-            <p class="p">A Game-Changer for Networking As an entrepreneur, the quest for meaningful connections can be daunting. Today has been a game-changer for me. The caliber of professionals I've met here is unparalleled. Each connection has been a stepping stone to deeper industry knowledge and potential collaborations. It’s refreshing to find a platform where every interaction has the promise of progress.</p>
-          </div>
-          <div class="swiper-slide"> <div class="d-flex">
-            <img src="./images/c_img2.png"  class="img-1">
-            <div class="textContainer">
-              <h2>Samantha</h2>
-              <p>Aspiring Entrepreneur</p>
-            </div>
-            <div class="d-flex">
-              <img src="./images/FillStar.svg" class="FillStar" >
-              <img src="./images/FillStar.svg" class="FillStar" >
-              <img src="./images/FillStar.svg" class="FillStar" >
-              <img src="./images/FillStar.svg" class="FillStar" >
-              <img src="./images/Star.svg" class="FillStar" >
-            </div>
           </div>
           <p class="p">A Game-Changer for Networking As an entrepreneur, the quest for meaningful connections can be daunting. Today has been a game-changer for me. The caliber of professionals I've met here is unparalleled. Each connection has been a stepping stone to deeper industry knowledge and potential collaborations. It’s refreshing to find a platform where every interaction has the promise of progress.</p></div>
         
           <div class="swiper-slide">
-            <div class="d-flex">
-              <img src="./images/c_img1.png"  class="img-1">
-              <div class="textContainer">
-                <h2>Jamie</h2>
-                <p>Tech Startup Founder</p>
-              </div>
-              <div class="d-flex">
-                <img src="./images/FillStar.svg" class="FillStar" >
-                <img src="./images/FillStar.svg" class="FillStar" >
-                <img src="./images/FillStar.svg" class="FillStar" >
-                <img src="./images/FillStar.svg" class="FillStar" >
-                <img src="./images/Star.svg" class="FillStar" >
-              </div>
+            <div class="d-flex justify-content-between">
+             
+            
+                <div class="textContainer">
+                  <img src="./images/c_img1.png"  class="img-1">
+                <div class="flexdirection">
+                  <h2>Jamie</h2>
+                  <p>Tech Startup Founder</p>
+                </div>
+                </div>
+                <div class="d-flex">
+                  <img src="./images/FillStar.svg" class="FillStar" >
+                  <img src="./images/FillStar.svg" class="FillStar" >
+                  <img src="./images/FillStar.svg" class="FillStar" >
+                  <img src="./images/FillStar.svg" class="FillStar" >
+                  <img src="./images/Star.svg" class="FillStar" >
+                </div>
+            
             </div>
             <p class="p">A Game-Changer for Networking As an entrepreneur, the quest for meaningful connections can be daunting. Today has been a game-changer for me. The caliber of professionals I've met here is unparalleled. Each connection has been a stepping stone to deeper industry knowledge and potential collaborations. It’s refreshing to find a platform where every interaction has the promise of progress.</p>
           </div>
-          <div class="swiper-slide"> <div class="d-flex">
-            <img src="./images/c_img2.png"  class="img-1">
+          <div class="swiper-slide"> <div class="d-flex justify-content-between">
+         
+       
             <div class="textContainer">
+              <img src="./images/c_img2.png"  class="img-1">
+             <div class="flexdirection">
               <h2>Samantha</h2>
               <p>Aspiring Entrepreneur</p>
+             </div>
             </div>
             <div class="d-flex">
               <img src="./images/FillStar.svg" class="FillStar" >
@@ -735,30 +823,38 @@ line-height: normal;
               <img src="./images/FillStar.svg" class="FillStar" >
               <img src="./images/Star.svg" class="FillStar" >
             </div>
+        
           </div>
           <p class="p">A Game-Changer for Networking As an entrepreneur, the quest for meaningful connections can be daunting. Today has been a game-changer for me. The caliber of professionals I've met here is unparalleled. Each connection has been a stepping stone to deeper industry knowledge and potential collaborations. It’s refreshing to find a platform where every interaction has the promise of progress.</p></div>
           <div class="swiper-slide">
-            <div class="d-flex">
-              <img src="./images/c_img1.png"  class="img-1">
-              <div class="textContainer">
-                <h2>Jamie</h2>
-                <p>Tech Startup Founder</p>
-              </div>
-              <div class="d-flex">
-                <img src="./images/FillStar.svg" class="FillStar" >
-                <img src="./images/FillStar.svg" class="FillStar" >
-                <img src="./images/FillStar.svg" class="FillStar" >
-                <img src="./images/FillStar.svg" class="FillStar" >
-                <img src="./images/Star.svg" class="FillStar" >
-              </div>
+            <div class="d-flex justify-content-between">
+                <div class="textContainer">
+                  <img src="./images/c_img1.png"  class="img-1">
+                <div class="flexdirection">
+                  <h2>Jamie</h2>
+                  <p>Tech Startup Founder</p>
+                </div>
+                </div>
+                <div class="d-flex">
+                  <img src="./images/FillStar.svg" class="FillStar" >
+                  <img src="./images/FillStar.svg" class="FillStar" >
+                  <img src="./images/FillStar.svg" class="FillStar" >
+                  <img src="./images/FillStar.svg" class="FillStar" >
+                  <img src="./images/Star.svg" class="FillStar" >
+                </div>
+            
             </div>
             <p class="p">A Game-Changer for Networking As an entrepreneur, the quest for meaningful connections can be daunting. Today has been a game-changer for me. The caliber of professionals I've met here is unparalleled. Each connection has been a stepping stone to deeper industry knowledge and potential collaborations. It’s refreshing to find a platform where every interaction has the promise of progress.</p>
           </div>
-          <div class="swiper-slide"> <div class="d-flex">
-            <img src="./images/c_img2.png"  class="img-1">
+          <div class="swiper-slide"> <div class="d-flex justify-content-between">
+         
+         
             <div class="textContainer">
+              <img src="./images/c_img2.png"  class="img-1">
+            <div class="flexdirection">
               <h2>Samantha</h2>
               <p>Aspiring Entrepreneur</p>
+            </div>
             </div>
             <div class="d-flex">
               <img src="./images/FillStar.svg" class="FillStar" >
@@ -767,30 +863,41 @@ line-height: normal;
               <img src="./images/FillStar.svg" class="FillStar" >
               <img src="./images/Star.svg" class="FillStar" >
             </div>
+     
           </div>
           <p class="p">A Game-Changer for Networking As an entrepreneur, the quest for meaningful connections can be daunting. Today has been a game-changer for me. The caliber of professionals I've met here is unparalleled. Each connection has been a stepping stone to deeper industry knowledge and potential collaborations. It’s refreshing to find a platform where every interaction has the promise of progress.</p></div>
           <div class="swiper-slide">
-            <div class="d-flex">
-              <img src="./images/c_img1.png"  class="img-1 ">
-              <div class="textContainer">
-                <h2>Jamie</h2>
-                <p>Tech Startup Founder</p>
+            <div class="d-flex justify-content-between">
+            
+           
+              <div class="textContainer left" >
+                <img src="./images/c_img1.png"  class="img-1 ">
+                <div class="flexdirection">
+                  <h2>Jamie</h2>
+                  <p>Tech Startup Founder</p>
+                </div>
+             
               </div>
-              <div class="d-flex">
+              <div class="d-flex right">
                 <img src="./images/FillStar.svg" class="FillStar" >
                 <img src="./images/FillStar.svg" class="FillStar" >
                 <img src="./images/FillStar.svg" class="FillStar" >
                 <img src="./images/FillStar.svg" class="FillStar" >
                 <img src="./images/Star.svg" class="FillStar" >
               </div>
+        
             </div>
             <p class="p">A Game-Changer for Networking As an entrepreneur, the quest for meaningful connections can be daunting. Today has been a game-changer for me. The caliber of professionals I've met here is unparalleled. Each connection has been a stepping stone to deeper industry knowledge and potential collaborations. It’s refreshing to find a platform where every interaction has the promise of progress.</p>
           </div>
-          <div class="swiper-slide"> <div class="d-flex">
-            <img src="./images/c_img2.png"  class="img-1">
+          <div class="swiper-slide"> <div class="d-flex justify-content-between">
+           
+        
             <div class="textContainer">
-              <h2>Samantha</h2>
-              <p>Aspiring Entrepreneur</p>
+              <img src="./images/c_img2.png"  class="img-1">
+           <div class="flexdirection">
+            <h2>Samantha</h2>
+            <p>Aspiring Entrepreneur</p>
+           </div>
             </div>
             <div class="d-flex">
               <img src="./images/FillStar.svg" class="FillStar" >
@@ -799,14 +906,19 @@ line-height: normal;
               <img src="./images/FillStar.svg" class="FillStar" >
               <img src="./images/Star.svg" class="FillStar" >
             </div>
+         
           </div>
           <p class="p">A Game-Changer for Networking As an entrepreneur, the quest for meaningful connections can be daunting. Today has been a game-changer for me. The caliber of professionals I've met here is unparalleled. Each connection has been a stepping stone to deeper industry knowledge and potential collaborations. It’s refreshing to find a platform where every interaction has the promise of progress.</p></div>
           <div class="swiper-slide">
-            <div class="d-flex">
-              <img src="./images/c_img1.png"  class="img-1">
+            <div class="d-flex justify-content-between">
+            
+       
               <div class="textContainer">
-                <h2>Jamie</h2>
+                <img src="./images/c_img1.png"  class="img-1">
+                <div class="flexdirection">
+                  <h2>Jamie</h2>
                 <p>Tech Startup Founder</p>
+                </div>
               </div>
               <div class="d-flex">
                 <img src="./images/FillStar.svg" class="FillStar" >
@@ -815,6 +927,7 @@ line-height: normal;
                 <img src="./images/FillStar.svg" class="FillStar" >
                 <img src="./images/Star.svg" class="FillStar" >
               </div>
+        
             </div>
             <p class="p">A Game-Changer for Networking As an entrepreneur, the quest for meaningful connections can be daunting. Today has been a game-changer for me. The caliber of professionals I've met here is unparalleled. Each connection has been a stepping stone to deeper industry knowledge and potential collaborations. It’s refreshing to find a platform where every interaction has the promise of progress.</p>
           </div>
@@ -838,7 +951,7 @@ line-height: normal;
     </div>
     <!-- end Carousal Container -->
     <!-- Question Container -->
-    <div class="container" style="margin-top: 150px; margin-bottom: 80px;">
+    <div class="container" style="margin-top: 80px; margin-bottom: 80px;">
       <div class="row">
         <div class="col-md-6">
            <h1 class="q-text ">Any Question?</h1>
@@ -963,6 +1076,54 @@ line-height: normal;
        </div>
       </div>
       </div>
+      <!-- for Smaller Screens -->
+        <div class="s_foooter_container">
+          <div class="footer-container">
+            <img src="./images/Logo.png" style="color: #FFFFFF;" alt="Logo" width="120" height="88">
+        </div>
+      <div class="d-flex justify-content-between">
+        <div class="wiDth">
+          <div class="d-flex justify-content-between mb-4" >
+            <a href="#" class="footer-link">Home</a>
+            <a href="#" class="footer-link">Features</a>
+          </div>
+          <div class="d-flex justify-content-between" >
+            <a href="#" class="footer-link">Overview</a>
+            <a href="#" class="footer-link">Contact Us</a>
+          </div>
+        </div>
+        <div class="wiDth1">
+          <div class="d-flex">
+            <div class="all_rights_icon">
+              <img src="./images/insta.png" alt="instagram" class="icon_img">
+            </div>
+            <div class="all_rights_icon">
+              <img src="./images/Close.svg" alt="instagram" class="icon_img">
+            </div>
+           </div>
+        </div>
+      </div>
+      <div class="d-flex">
+        <div class="footer_card">
+          <div class="d-flex">
+           <img src="./images/Apple.svg" alt="Apple" class="footer_icon">
+          <div>
+           <h5 class="f_text">Download on the</h5>
+           <h2 class="f_text_b">App store</h2>
+          </div>
+          </div>
+        </div>
+        <div class="footer_card">
+         <div class="d-flex">
+           <img src="./images/GooglePlay.svg" alt="Apple" class="footer_icon">
+          <div>
+           <h5 class="f_text">Get It On</h5>
+           <h2 class="f_text_b">Google Play</h2>
+          </div>
+          </div>
+        </div>
+     </div>
+        </div>
     </div>
     <!-- end of Footer Container -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
