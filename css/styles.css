@@ -802,12 +802,12 @@ z-index: 2;
 
   /* Styles from the second HTML */
   .image-container {
-    height: 888px;
-flex-shrink: 0;
-border-radius: 40px;
-border: 1px solid #434978;
-background: rgba(12, 20, 40, 0.40);
-backdrop-filter: blur(100px);
+    height: 780px;
+  flex-shrink: 0;
+  border-radius: 40px;
+  border: 1px solid #434978;
+  background: rgba(12, 20, 40, 0.40);
+  backdrop-filter: blur(100px);
   }
 
   button {
