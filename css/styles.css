@@ -48,7 +48,6 @@ html,body
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    text-align: left;
     line-height: normal;
 }
 .description-text {
@@ -72,8 +71,8 @@ html,body
 }
 
 .custom-image {
-    width: 520px;
-    height: auto;
+    width: 600px;
+    height: 500px;
     flex-shrink: 0;
    
 }
@@ -83,6 +82,7 @@ padding: 12px 24px;
 justify-content: center;
 align-items: center;
 gap: 6px;
+z-index: 2;
 }
 .message{
     display: flex;
@@ -90,6 +90,7 @@ padding: 12px 24px;
 justify-content: center;
 align-items: center;
 gap: 6px;
+z-index: 2;
 }
 .message1{
     display: flex;
@@ -97,6 +98,7 @@ gap: 6px;
 justify-content: center;
 align-items: center;
 gap: 6px;
+z-index: 2;
 }
 input[type="text"] {  
     width: 400px;
@@ -222,9 +224,10 @@ line-height: normal;
   .logos {
     overflow: hidden;
     padding: 60px 0;
-    background: #131749;
+    /* background: #131749; */
     white-space: nowrap;
-    position: relative;
+    position: absolute;
+    top: 20px;
   }
   
   .logos:before,
@@ -288,69 +291,64 @@ font-weight: 400;
 line-height: 24px; /* 150% */
 text-align: justify;
 }
+/* .wrapper {
+  position: relative;
+  width: 280px;
+  height: 350px;
+ 
+} */
+
 .custom-card {
-    height: 550px;
-    flex-shrink: 0;
+  width: 100%;
+ height: 550px;
+    background: url('../images/nbg2.png') no-repeat;
     border-radius: 40px;
-    border: 1px solid #434978;
-    background: rgba(12, 20, 40, 0.40);
-    backdrop-filter: blur(100px);
-    text-align: center;
-    padding-top: 30px;
-    position: relative;
+border: 1px solid #434978;
+backdrop-filter: blur(100px);
+
   }
-  .custom-card::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0; /* Adjusted to position from the left */
-    width: 100%; 
-    height: 100%; 
-    /* border-top-right-radius: 50%; */
-    background: radial-gradient( rgba(19, 23, 73, 0.8) 100%, transparent 100%), linear-gradient( rgba(1, 2, 21, 0.8), rgba(3, 73, 250, 0.1) 100%);
-    backdrop-filter: blur(100px); 
-    border-radius: 40px;
-  }
+ 
   
   .back_logo1{
-    width: 250px;
-height: 350px;
+    width: 272.978px;
+    height: 438.629px;    
 transform: rotate(10.324deg);
 flex-shrink: 0;
 border-radius: 40px;
 background: linear-gradient(179deg, #1D2B5C 0.5%, rgba(0, 0, 0, 0.00) 93.49%);
 box-shadow: 4px 4px 120px 0px rgba(0, 0, 0, 0.60);
 position: absolute;
-left: 55px;
-top: 65px;
+right: 40px;
+top: 60px;
  z-index: -10;
   }
 
   .back_logo2{
-    width: 250px;
-height: 350px;
-transform: rotate(10.324deg);
-flex-shrink: 0;
+    width: 257.35px;
+    height: 417.716px;
+    transform: rotate(20.552deg);
+    flex-shrink: 0;
 border-radius: 40px;
 background: linear-gradient(179deg, #1D2B5C 0.5%, rgba(0, 0, 0, 0.00) 93.49%);
 box-shadow: 4px 4px 120px 0px rgba(0, 0, 0, 0.60);
 position: absolute;
-left: 70px;
-top: 65px;
- z-index: -15;
+right: 80px;
+top: 60px;
+ z-index: -5;
   }
   .bottom_card{
     display: flex;
-width: 300px;
-padding: 20px;
-flex-direction: column;
-align-items: flex-start;
-gap: 16px;
+    width: 360px;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
 border-radius: 22px;
 background: rgba(63, 80, 124, 0.40);
 box-shadow: 8px 8px 120px 0px rgba(0, 0, 0, 0.30);
 backdrop-filter: blur(16px);
-margin-top: -20px;
+margin-top: -150px;
+margin-left: 50px;
   }
   .top{
     display: flex;
@@ -428,65 +426,72 @@ align-self: stretch;
 
   .custom-card-small {
     position: relative; 
-    height: 300px;
+    height: 356px;
     flex-shrink: 0;
     border-radius: 40px;
     border: 1px solid rgba(67, 73, 120, 0.00);
-    background: rgba(12, 20, 40, 0.40);
-    z-index: 0;
+    backdrop-filter: blur(100px);
+    background-image: url('../images/nbg3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
   }
 
+ 
 
   .custom-card-small1 {
     position: relative; 
-    height: 300px;
+    height: 356px;
     flex-shrink: 0;
     border-radius: 40px;
     border: 1px solid rgba(67, 73, 120, 0.00);
-    background: rgba(12, 20, 40, 0.40);
-    backdrop-filter: blur(100px); 
-    z-index: 0;
+    backdrop-filter: blur(100px);
+    background-image: url('../images/nbg4.png');
+    background-repeat: no-repeat;
+    background-size: cover;
    
   }
   
-  
+ 
   .custom-card-small2 {
     position: relative; 
-    height: 300px;
+    height: 356px;
     flex-shrink: 0;
     border-radius: 40px;
     border: 1px solid rgba(67, 73, 120, 0.00);
-    background: rgba(12, 20, 40, 0.40);
-    backdrop-filter: blur(100px); 
-    z-index: 0;
+    backdrop-filter: blur(100px);
+    background-image: url('../images/nbg5.png');
+    background-repeat: no-repeat;
+    background-size: cover;
    
   }
   
-
+ 
   .custom-card-small3 {
     position: relative; 
-    height: 300px;
+    height: 356px;
     flex-shrink: 0;
     border-radius: 40px;
     border: 1px solid rgba(67, 73, 120, 0.00);
-    background: rgba(12, 20, 40, 0.40);
-    backdrop-filter: blur(100px); 
-    z-index: 0;
+    backdrop-filter: blur(100px);
+    background-image: url('../images/nbg6.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+   
   }
-  
-
-
   
 
   
   
   .image1{
-    width: 250px;
-height: 350px;
+    width: 342px;
+    height: 492px;
+    flex-shrink: 0;
 flex-shrink: 0;
 border-radius: 40px;
 object-fit: cover;
 z-index: 2;
+margin-top: 20px;
   }
   .h4_small{
     color: #FFF;
@@ -516,7 +521,7 @@ background: rgba(63, 80, 124, 0.40);
 backdrop-filter: blur(8px);
 position: absolute;
 top: 45%;
-right: 30px;
+right: 68px;
 cursor: pointer;
   }
   .float_button_bottom{
@@ -530,7 +535,7 @@ cursor: pointer;
     backdrop-filter: blur(8px);
     position: absolute;
     top: 57%;
-    right: 30px;
+    right: 68px;
     cursor: pointer;
   }
   .float_icon{
@@ -690,23 +695,13 @@ cursor: pointer;
     height: auto;
 flex-shrink: 0;
 border-radius: 40px;
-border: 1px solid #434978;
-background: rgba(12, 20, 40, 0.40);
+background-image: url('../images/wbg1.png');
+background-repeat: no-repeat;
+background-size: cover;
 backdrop-filter: blur(100px);
 z-index: 2;
   }
-  .cards::before{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%; 
-    height: 100%; 
-
-    background: radial-gradient( rgba(19, 23, 73, 0.8) 100%, transparent 100%), linear-gradient( rgba(1, 2, 21, 0.8), rgba(3, 73, 250, 0.1) 100%);
-    backdrop-filter: blur(100px); 
-    border-radius: 40px;
-  }
+ 
 
   .CarousalCard {
     border: 1px solid #ccc;
@@ -718,7 +713,7 @@ z-index: 2;
 
   .CarousalActive {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    width: 512px;
+ width: 512px;
     padding: 24px;
     flex-direction: column;
     align-items: flex-start;
@@ -729,18 +724,7 @@ z-index: 2;
     margin-left: 30px;
     margin-top: 10px;
   }
-  .CarousalActive::before{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%; 
-    height: 100%; 
-
-    background: radial-gradient( rgba(19, 23, 73, 0.8) 100%, transparent 100%), linear-gradient( rgba(1, 2, 21, 0.8), rgba(3, 73, 250, 0.1) 100%);
-    backdrop-filter: blur(100px); 
-    border-radius: 22px;
-  }
+  
 .CarousalActive h2{
   color: #FFF;
   font-family: K2D;
@@ -788,26 +772,47 @@ z-index: 2;
   .images {
     flex: 1;
     text-align: center;
+    background-image: url('../images/wbg2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 40px;
+border: 1px solid #434978;
+
+
+
+backdrop-filter: blur(100px);
   }
 
   .CarousalImage {
-    width: 292.5px;
-    height: 633px;
+    width: 195px;
+    height: 535px;
     flex-shrink: 0;
+    border-radius: 32px;
+    margin-left: 20px;
   }
+ .ImageActive{
+  width: 245px;
+height: 649px;
+flex-shrink: 0;
+border-radius: 46.75px;
+border: 0.5px solid #646464;
 
+opacity: 0.8;
+filter: blur(0.25px);
+margin-top: 30px;
+ }
   .inactive-image {
     display: none;
   }
 
   /* Styles from the second HTML */
   .image-container {
-    height: 780px;
-  flex-shrink: 0;
-  border-radius: 40px;
-  border: 1px solid #434978;
-  background: rgba(12, 20, 40, 0.40);
-  backdrop-filter: blur(100px);
+    height: 888px;
+flex-shrink: 0;
+border-radius: 40px;
+border: 1px solid #434978;
+background: rgba(12, 20, 40, 0.40);
+backdrop-filter: blur(100px);
   }
 
   button {
@@ -823,7 +828,9 @@ height: 728px;
 flex-shrink: 0;
 border-radius: 40px;
 border: 1px solid #434978;
-background: rgba(12, 20, 40, 0.40);
+background-image: url('../images/ebg1.png');
+background-repeat: no-repeat;
+background-size: cover;
 backdrop-filter: blur(100px);
   }
   .img_1{
@@ -911,7 +918,9 @@ height: 728px;
 flex-shrink: 0;
 border-radius: 40px;
 border: 1px solid #434978;
-background: rgba(12, 20, 40, 0.40);
+background-image: url('../images/bbg.png');
+background-repeat: no-repeat;
+background-size: cover;
 backdrop-filter: blur(100px);
 display: flex;
 
@@ -1002,14 +1011,17 @@ height: 728px;
 flex-shrink: 0;
 border-radius: 40px;
 border: 1px solid #434978;
-background: rgba(12, 20, 40, 0.40);
+background-image: url('../images/cbg.png');
+background-repeat: no-repeat;
+background-size: cover;
 backdrop-filter: blur(100px);
 display: flex;
 justify-content: center;
 align-items: center;
   }
   .chatImage{
-    width: 711px;
+    width: 100%;
+    padding: 20px;
 height: 534px;
 flex-shrink: 0;
   }
@@ -1407,6 +1419,22 @@ height: 20px;
   /* end of Footer Container */
  
   @media screen and (max-width: 1024px) {
+    
+    .bottom_card{
+      width: 100%;
+      margin-left: 0px;
+    }
+    .float_button_top {
+      top: 45%;
+      right: 5px;
+    }
+    .float_button_bottom {
+   
+      right: 5px;
+    }
+    .image1{
+      width: 100%;
+    }
     .embraceLeftContainer {
       width: 100%;
     }
@@ -1423,18 +1451,13 @@ height: 20px;
       background: rgba(12, 20, 40, 0.40);
       backdrop-filter: blur(100px);
   }
-  .CarousalImage {
-    width: 240px;
-    height: 600px;
-    flex-shrink: 0;
-    margin-right: 10px;
-}
+ 
     .carousal_t {
       font-size: 24px;
     }
     .custom-image {
-      width: 90%;
-      height: auto;
+      width: 500px;
+      height: 300px;
       flex-shrink: 0;
   }
   input[type="text"] {
@@ -1461,6 +1484,7 @@ height: 20px;
     }
   }
   @media screen and (max-width: 768px) {
+    
     .footer_card{
       display: flex;
 width: 174px;
@@ -1566,7 +1590,7 @@ height: 16px;
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     .custom-card{
       margin-bottom: 30px;
     }
@@ -1582,6 +1606,7 @@ height: 16px;
     }
     .message1{
         display: none;
+
     }
     .message0{
         display: flex;
@@ -1872,6 +1897,18 @@ background: #0D152B;
 }
 .logos{
   margin-top: 30px;
+  position: absolute;
+  top: 30px;
+}
+.logo-section {
+ width: 100%;
+ position: relative;
+}
+.bg-image{
+  width: 100%;
+  height: 200px;
+  margin-top: -300px;
+
 }
 .n_heading{
   color: #FFF;
