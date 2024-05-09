@@ -691,59 +691,21 @@ cursor: pointer;
   }
 
   .cards {
-    flex: 1;
-    height: auto;
+   width: 100%;
+    height: 888px;
 flex-shrink: 0;
 border-radius: 40px;
 background-image: url('../images/wbg1.png');
 background-repeat: no-repeat;
 background-size: cover;
 backdrop-filter: blur(100px);
-z-index: 2;
+z-index: 1;
   }
  
 
-  .CarousalCard {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
-    transition: box-shadow 0.3s ease;
-    z-index: 2;
-  }
 
-  .CarousalActive {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
- width: 512px;
-    padding: 24px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    border-radius: 22px;
-    background: rgba(63, 80, 124, 0.20);
-    backdrop-filter: blur(60px);
-    margin-left: 30px;
-    margin-top: 10px;
-  }
+
   
-.CarousalActive h2{
-  color: #FFF;
-  font-family: K2D;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal; 
-  z-index: 2;
-}
-.CarousalActive p{
-  align-self: stretch;
-  color: #757A8D;
-  font-family: Geometria;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px; /* 150% */
-  z-index: 2;
-}
 .CarousalCard{
   display: flex;
   width: 400px;
@@ -769,6 +731,44 @@ z-index: 2;
   font-weight: 400;
   line-height: 24px; /* 150% */
 }
+.CarousalActive {
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 500px !important;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 22px;
+  background: rgba(63, 87, 148, 0.2);
+
+  backdrop-filter: blur(60px);
+  margin-left: 30px;
+  margin-top: 10px;
+  z-index: 10;
+  margin-right: -50px;
+  order: 2;
+}
+
+.CarousalActive h2{
+color: #FFF;
+font-family: K2D;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal; 
+z-index: 2;
+}
+.CarousalActive p{
+align-self: stretch;
+color: #757A8D;
+font-family: Geometria;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+z-index: 2;
+}
   .images {
     flex: 1;
     text-align: center;
@@ -777,10 +777,10 @@ z-index: 2;
     background-size: cover;
     border-radius: 40px;
 border: 1px solid #434978;
-
-
-
 backdrop-filter: blur(100px);
+position: relative;
+z-index: 1;
+order: 1;
   }
 
   .CarousalImage {
@@ -813,6 +813,7 @@ border-radius: 40px;
 border: 1px solid #434978;
 background: rgba(12, 20, 40, 0.40);
 backdrop-filter: blur(100px);
+position: relative;
   }
 
   button {
@@ -1635,7 +1636,7 @@ line-height: normal;
 margin-bottom: 20px;
     }
     .image-container{
-      width: 361px;
+      width: 100%;
 height: 285px;
 flex-shrink: 0;
 border-radius: 24px;
@@ -1646,24 +1647,21 @@ backdrop-filter: blur(100px);
     .nextButton{
       width: 56px;
 height: 56px;
-left: 40%;
+
     }
-    .CarousalImage{
-      width:42%;
-height: 228px;
-flex-shrink: 0;
-margin-right: 20px;
+    .images{
+      margin-bottom: 20px;
     }
     .cards{
-      width: 345px;
-height: auto;
-flex-shrink: 0;
-border-radius: 24px;
-border: 1px solid #434978;
-background: rgba(12, 20, 40, 0.40);
-backdrop-filter: blur(50px);
-margin-top: 20px;
+      height: auto;
     }
+    .CarousalImage{
+      width:35%;
+height: 228px;
+flex-shrink: 0;
+margin-right:0px;
+    }
+ 
     .CarousalCard h2{
       align-self: stretch;
       color: #FFF;
@@ -1943,3 +1941,54 @@ line-height: 18px; /* 150% */
   flex-direction: column;
 }
   }
+
+/* For tablets (landscape and portrait) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .ImageActive {
+    width: 45%;
+  }
+  .CarousalActive h2 {
+    font-size: 14px;
+  }
+  .CarousalCard h2 {
+    font-size: 14px;
+  }
+  .CarousalCard p {
+    font-size: 12px;
+  }
+  .q-text {
+    font-size: 32px;
+  }
+  .q_card {
+width: 154px;
+  }
+  .back_logo2 {
+    width: 80%;
+   right: 60px;
+   top: 70px;
+  
+  }
+  .back_logo1 {
+    width: 80%;
+   
+    right: 40px;
+  
+}
+.c_heading {
+  font-size: 16px;
+}
+.image-container {
+  height: 910px;
+}
+.cards{
+  height: 910px;
+}
+.nextButton {
+  left: 42%;
+}
+.step {
+   font-size: 14px;
+}
+
+}
+
