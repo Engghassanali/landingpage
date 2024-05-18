@@ -485,13 +485,26 @@
       line-height: normal;
     }
 
-    .swiper-slide {
+        /* Media query for screen size between 1200px and 1500px */
+  @media (min-width: 1200px) and (max-width: 1500px) {
+  .swiper-slide {
       width: 550px !important;
       height: 300px !important;
-      /* Increase width to 500px */
-      margin-right: 20px;
-      /* Adjust margin if necessary */
     }
+    
+  }
+  @media (min-width: 1400px) and (max-width: 1500px) {
+   /* Styles from the second HTML */
+   .image-container {
+    height: 770px;
+flex-shrink: 0;
+border-radius: 40px;
+border: 1px solid #434978;
+background: rgba(12, 20, 40, 0.40);
+backdrop-filter: blur(100px);
+  }
+    
+  }
     
   </style>
 </head>
